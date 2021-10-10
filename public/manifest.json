@@ -6,6 +6,12 @@
       "src": "/images/logo.png",
       "sizes": "1024x1024",
       "type": "image/png"
+    },
+    {
+      "src": "/images/maskable_icon.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "start_url": ".",

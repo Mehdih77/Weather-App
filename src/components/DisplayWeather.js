@@ -7,7 +7,7 @@ function DisplayWeather({data}) {
 
   return (
     <div className="displayweather">
-      {data.cod !== 404 ? (
+      {data ? (
         <React.Fragment>
           <div className="maincard">
             <div>
