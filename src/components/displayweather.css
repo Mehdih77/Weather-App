@@ -1,109 +1,68 @@
 .displayweather {
   color: rgb(42, 42, 42);
   margin-top: 20px;
+}
+.maincard {
   display: flex;
-  flex-flow: column nowrap;
-  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.349);
+  padding-bottom: 10px;
 }
-
-.displayweather .maincard {
-  width: 500px;
-  margin-top: 20px;
-  align-self: center;
-  padding: 50px;
-  border-radius: 20px;
-  position: relative;
-  background: rgba(6, 66, 30, 0.8);
-  border: 2px inset rgba(2, 88, 36, 0.8);
+.maincard div:first-child {
+  display: flex;
+  flex-direction: column;
+  margin-right: 80px;
 }
-
-.displayweather .maincard .cardtitle {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 1.5rem;
+.maincard div:last-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-
-.displayweather .maincard .cardsubtitle {
-  position: absolute;
-  left: 10px;
-  color: rgb(170, 170, 170);
-  margin-top: -8px;
+.cardtitle {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.cardsubtitle {
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: 8px;
+}
+.weather-main {
+  color: rgba(0, 0, 0, 0.8);
 }
 .displayweather h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   margin: -10px;
-  margin-left: -150px;
 }
-
-.displayweather .weather-icon {
+.weather-icon {
   width: 100px;
-
-  position: absolute;
-  top: 50px;
 }
 
-.displayweather .weather-main {
-  position: absolute;
-
-  top: 120px;
-  left: 310px;
-  font-weight: 500;
-  font-size: 1.2rem;
+/* weatherdetails */
+.weatherdetails {
+  width: 400px;
+  margin: 20px auto;
 }
-
-.displayweather .weather-description {
-  position: absolute;
-  left: 10px;
-  font-size: 1.4rem;
+.weatherdetails table {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-.displayweather .weatherdetails {
-  margin-left: 50px;
-  margin-right: 50px;
-
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto;
-  grid-gap: 20px;
-}
-.displayweather .weatherdetails .section1 {
-  justify-self: right;
-  width: 300px;
+tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.349);
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px 40px;
 }
 
 h4 {
-  text-align: left;
-  margin-right: 30px;
-  font-size: 1.2rem;
-  white-space: nowrap;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
-h4 i{
-  color: rgb(190, 101, 0);
-}
-.sunrise{
-  color: rgb(236, 222, 18);
-}
-.fa-wind{
-  color: rgb(181, 249, 255);
-}
-.fa-temperature-high{
-  color: rgb(187, 47, 28);
-}
-.fa-water{
-  color: rgb(68, 68, 248);
-}
-.fa-poo-storm{
-  color: rgb(170, 144, 0);
-}
-.fa-low-vision{
-  color: green;
-}
-
-
-td {
-  border-bottom: 1px inset rgba(2, 88, 36, 0.8);
-}
-
 .displayweather .weatherdetails span {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
 }

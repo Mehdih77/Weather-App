@@ -1,60 +1,56 @@
-body{
+body {
   background: url("https://mocah.org/uploads/posts/124416-miui-8-rainy-weather-background-minimal-hd.png");
 }
 .weather {
-  width: 700px;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.246);
-  margin-top: 20px;
-  border: 6px outset rgb(219, 219, 219);
+  margin-top: 30px;
+  border: 1px solid rgb(219, 219, 219);
   border-radius: 20px;
   padding-bottom: 30px;
-  padding: 0px 20px 20px 20px;
-  margin-left: 25%;
 }
 .weather .title {
   color: aliceblue;
-  font-size: 4rem;
-  padding-left: 130px;
-  text-shadow: 0 2px 20px rgb(88, 175, 251);
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: -10px;
 }
 .weather form {
-  margin-top: 30px;
-  padding-left: 90px;
-
+  display: flex;
+  justify-content: center;
 }
-.weather form input {
-  padding: 10px;
+.weather form label {
+  position: relative;
+}
+.weather form label input {
+  width: 360px;
+  padding: 12px;
   border: none;
-  border: 3px inset rgb(202, 202, 202);
-  margin-right: 10px;
-  margin-left: 30px;
+  border-radius: 10px;
 }
-input::placeholder{
+input:enabled {
   font-size: 17px;
 }
-
 .weather form input:focus {
   outline: none;
-  border: 3px inset rgb(202, 202, 202);
-}
-
-.weather .getweather {
-  margin-left: 25px;
-  padding: 7px;
-  font-size: 1rem;
   border: none;
-  border-radius: 20px;
-  border: 3px inset rgb(224, 224, 224);
-  background: rgba(1, 59, 24, 0.8);
+}
+
+.weather-btn {
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  background-color: #fff;
+  z-index: 99;
+  border: none;
   cursor: pointer;
-  color: whitesmoke;
+  border-radius: 10px;
+}
+.weather-btn:hover {
+  color: #61A3DD;
+}
+.weather-btn:active {
+  transform: scale(0.9);
 }
 
-.weather .getweather:hover {
-  color: rgb(238, 250, 239);
-  background-color:  rgba(0, 37, 15, 0.8);
-}
-
-.weather .getweather:focus {
-  outline: none;
-}

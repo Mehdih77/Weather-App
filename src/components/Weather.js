@@ -1,65 +1,41 @@
 import React, { useState } from "react";
+import {fetchWeather} from './api/fetchWeather';
 import DisplayWeather from "./DisplayWeather";
 import "./weather.css";
 
 function Weather() {
   const [weather, setWeather] = useState({});
-
-  const [form, setForm] = useState({
-    city: "",
-    country: "",
-  });
-
-  const APIKEY = "bcda9a156c4a2107c473949d17b8dc15";
+  const [query, setQuery] = useState("");
 
   async function weatherData(e) {
-
     e.preventDefault();
-
-    if (!form.city) {
-      alert("Add values");
-    } else {
-      await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${form.city}&APPID=${APIKEY}`
-      )
-        .then( response => response.json())
-        .then( data => setWeather({data: data}));
-    }
+    const data = await fetchWeather(query);
+    setWeather(data);
+    setQuery('');
   }
 
-  const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.target.name] : e.target.value
-    })
-
-  };
-
   return (
-    <div className="weather">
-      <span className="title">Weather App</span>
+    <div className="weather container">
+      <p className="title">Weather App</p>
       <br />
       <form>
-        <input
-          type="text"
-          placeholder="city"
-          name="city"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          placeholder="Country"
-          name="country"
-          onChange={handleChange}
-        />
-        <button className="getweather" onClick={weatherData}>
-          Submit
-        </button>
+        <label>
+          <input
+            type="text"
+            placeholder="City"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            autoComplete='off'
+          />
+          <button className="weather-btn" onClick={weatherData}>
+            <i className="fas fa-search"></i>
+          </button>
+        </label>
       </form>
 
-      {weather.data ? (
+      {weather.main ? (
         <div>
-          <DisplayWeather data={weather.data} />
+          <DisplayWeather data={weather} />
         </div>
       ) : null}
     </div>
