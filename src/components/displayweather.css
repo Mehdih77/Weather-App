@@ -1,0 +1,109 @@
+.displayweather {
+  color: rgb(42, 42, 42);
+  margin-top: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+}
+
+.displayweather .maincard {
+  width: 500px;
+  margin-top: 20px;
+  align-self: center;
+  padding: 50px;
+  border-radius: 20px;
+  position: relative;
+  background: rgba(6, 66, 30, 0.8);
+  border: 2px inset rgba(2, 88, 36, 0.8);
+}
+
+.displayweather .maincard .cardtitle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+}
+
+.displayweather .maincard .cardsubtitle {
+  position: absolute;
+  left: 10px;
+  color: rgb(170, 170, 170);
+  margin-top: -8px;
+}
+.displayweather h1 {
+  font-size: 5rem;
+  margin: -10px;
+  margin-left: -150px;
+}
+
+.displayweather .weather-icon {
+  width: 100px;
+
+  position: absolute;
+  top: 50px;
+}
+
+.displayweather .weather-main {
+  position: absolute;
+
+  top: 120px;
+  left: 310px;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.displayweather .weather-description {
+  position: absolute;
+  left: 10px;
+  font-size: 1.4rem;
+}
+.displayweather .weatherdetails {
+  margin-left: 50px;
+  margin-right: 50px;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+.displayweather .weatherdetails .section1 {
+  justify-self: right;
+  width: 300px;
+}
+
+h4 {
+  text-align: left;
+  margin-right: 30px;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+h4 i{
+  color: rgb(190, 101, 0);
+}
+.sunrise{
+  color: rgb(236, 222, 18);
+}
+.fa-wind{
+  color: rgb(181, 249, 255);
+}
+.fa-temperature-high{
+  color: rgb(187, 47, 28);
+}
+.fa-water{
+  color: rgb(68, 68, 248);
+}
+.fa-poo-storm{
+  color: rgb(170, 144, 0);
+}
+.fa-low-vision{
+  color: green;
+}
+
+
+td {
+  border-bottom: 1px inset rgba(2, 88, 36, 0.8);
+}
+
+.displayweather .weatherdetails span {
+  font-size: 1.2rem;
+}
