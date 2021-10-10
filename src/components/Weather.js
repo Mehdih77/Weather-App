@@ -20,7 +20,7 @@ function Weather() {
       alert("Add values");
     } else {
       await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${form.city},${form.country}&APPID=${APIKEY}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${form.city}&APPID=${APIKEY}`
       )
         .then( response => response.json())
         .then( data => setWeather({data: data}));
