@@ -33,6 +33,6 @@ export default function WeatherList() {
   return <section className='weather_list_page'>
       <h3>{englishLanguage ? "Forecast Report" : "پیش بینی هواشناسی"}</h3>
       <img className='weather_list_page_img' src={rain} alt='Forecast Report' />
-      {showList}
+      {showList ? showList : <p className='no_forecast_report'>No Forecast Report!</p>}
       </section>;
 }

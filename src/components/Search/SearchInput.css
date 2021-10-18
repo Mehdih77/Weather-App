@@ -28,7 +28,7 @@ input::placeholder {
 .weather-btn {
   font-size: 22px;
   position: absolute;
-  top: 9px;
+  top: 13px;
   right: 11px;
   background-color: transparent;
   z-index: 99;

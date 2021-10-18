@@ -8,7 +8,7 @@
   align-items: center;
   margin-top: 60px;
 }
-.maincard_weather_image{
+.maincard_weather_image {
   display: flex;
   flex-direction: row;
   margin-bottom: -15px;
@@ -18,13 +18,13 @@
   margin-top: -10px;
   margin-left: 10px;
 }
-.maincard_weather_desc{
+.maincard_weather_desc {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.maincard_weather_desc h1{
+.maincard_weather_desc h1 {
   font-size: 90px;
   padding-left: 25px;
 }
@@ -39,7 +39,6 @@
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  
 }
 .weatherdetails table {
   display: flex;
@@ -63,4 +62,16 @@ h4 {
 .displayweather .weatherdetails span {
   font-size: 1.3rem;
   font-weight: 600;
+}
+
+@media screen and (max-width: 320px) {
+  .weatherdetails {
+    margin-top: 10px;
+  }
+  h4 {
+    font-size: 0.7rem;
+  }
+  .displayweather .weatherdetails span {
+    font-size: 1rem;
+  }
 }

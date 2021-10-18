@@ -18,6 +18,12 @@
   top: 100px;
   right: 20px;
 }
+.no_forecast_report{
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 80px;
+}
 
 /* ------------------------------ cards wrapper ----------------------------- */
 .weather_wrapper {

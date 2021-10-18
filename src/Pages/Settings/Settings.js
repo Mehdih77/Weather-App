@@ -59,11 +59,11 @@ export default function Settings() {
         {englishLanguage ? (
           <>
             Dark Mode
-            <ToggleBtn disable="true" />
+            <ToggleBtn disable={true} />
           </>
         ) : (
           <>
-            <ToggleBtn disable="true" />
+            <ToggleBtn disable={true} />
              حالت تاریکی
           </>
         )}
@@ -72,11 +72,11 @@ export default function Settings() {
         {englishLanguage ? (
           <>
             Push Notification
-            <ToggleBtn disable="true" />
+            <ToggleBtn disable={true} />
           </>
         ) : (
           <>
-            <ToggleBtn disable="true" />
+            <ToggleBtn disable={true} />
             اطلاع رسانی
           </>
         )}
