@@ -1,0 +1,28 @@
+.weather_list_page {
+  background-color: #1a1a1a;
+  position: relative;
+}
+.weather_list_page h3 {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 30px;
+  text-transform: uppercase;
+  z-index: 2;
+  padding-bottom: 140px;
+}
+.weather_list_page_img {
+  width: 250px;
+  margin-top: -70px;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+}
+/* cards wrapper */
+.weather_wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  /* background-color: black; */
+  color: #fff;
+}

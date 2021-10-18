@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './SearchInput.css';
-import {fetchWeather} from '../api/fetchWeather';
 import { useWeatherDispatch } from '../../Context/WeatherProvider';
+import { fetchWeatherAll, fetchWeatherOne } from '../../api/fetchWeather';
 
 
 export default function SearchInput() {
@@ -11,10 +11,15 @@ export default function SearchInput() {
 
     async function weatherData(e) {
       e.preventDefault();
-      const data = await fetchWeather(query);
+      const data = await fetchWeatherOne(query);
+      const allData = await fetchWeatherAll(query);
       dispatch({
           type: "GET_ONEWEATHER",
           payload: data
+      })
+      dispatch({
+          type: "GET_ALLWEATHER",
+          payload: allData
       })
       setQuery('');
     }

@@ -11,7 +11,6 @@ function DisplayWeather() {
     `${data.cod === 200 ? (data.weather[0]?.icon) : null}` +
     ".png";
 
-
   return (
     <>
     <div className="displayweather">
