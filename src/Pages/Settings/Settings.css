@@ -1,0 +1,30 @@
+.setting_page {
+  background-color: #1a1a1a;
+  position: relative;
+  min-height: 100vh;
+}
+.setting_page h3 {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 30px;
+  text-transform: uppercase;
+}
+.setting_page label {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 30px;
+}
+.setting_page_language {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+.setting_page_language select {
+  background-color: rgb(226, 226, 226);
+  width: 90px;
+  text-align: center;
+  outline: none;
+  border: none;
+}

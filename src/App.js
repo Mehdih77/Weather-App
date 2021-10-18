@@ -11,7 +11,7 @@ export default function App() {
       <Layout>
         <Route exact path="/" component={Weather} />
         <Route exact path="/list" component={WeatherList} />
-        <Route exact path="/setting" component={Settings} />
+        <Route exact path="/settings" component={Settings} />
       </Layout>
     </Switch>
   );

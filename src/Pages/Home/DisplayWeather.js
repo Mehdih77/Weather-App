@@ -1,9 +1,12 @@
 import React from "react";
-import { useWeatherState } from "../../Context/WeatherProvider";
 import "./displayweather.css";
+import { useWeatherState } from "../../Context/WeatherProvider";
+import {useSettingContext} from '../../Context/SettingContext/SettingProvider';
 
 function DisplayWeather() {
   const { oneWeather: data } = useWeatherState();
+  const { englishLanguage } = useSettingContext();
+
 
   const iconurl =
     "http://openweathermap.org/img/w/" +
@@ -39,7 +42,7 @@ function DisplayWeather() {
                     <span>{data.main.humidity} %</span>
                   </td>
                   <td>
-                    <h4>Humidity</h4>
+                    <h4>{englishLanguage ? "Humidity" : "رطوبت"}</h4>
                   </td>
                 </tr>
                 <tr>
@@ -50,7 +53,7 @@ function DisplayWeather() {
                     </span>
                   </td>
                   <td>
-                    <h4>High/Low</h4>
+                    <h4>{englishLanguage ? "High/Low" : "بیشترین دما/کمترین دما"}</h4>
                   </td>
                 </tr>
                 <tr>
@@ -58,7 +61,7 @@ function DisplayWeather() {
                     <span>{Math.floor((data.wind.speed * 18) / 5)} km/hr</span>
                   </td>
                   <td>
-                    <h4>Wind</h4>
+                    <h4>{englishLanguage ? "Wind" : "سرعت وزش باد"}</h4>
                   </td>
                 </tr>
                 <tr>
@@ -66,7 +69,7 @@ function DisplayWeather() {
                     <span>{data.main.pressure} hPa</span>
                   </td>
                   <td>
-                    <h4>Pressure</h4>
+                    <h4>{englishLanguage ? "Pressure" : "فشار هوا"}</h4>
                   </td>
                 </tr>
                 <tr>
@@ -79,7 +82,7 @@ function DisplayWeather() {
                     </span>
                   </td>
                   <td>
-                    <h4>Sunset</h4>
+                    <h4>{englishLanguage ? "Sunset" : "غروب آفتاب"}</h4>
                   </td>
                 </tr>
                 <tr>
@@ -92,7 +95,7 @@ function DisplayWeather() {
                     </span>
                   </td>
                   <td>
-                    <h4>Sunrise</h4>
+                    <h4>{englishLanguage ? "Sunrise" : "طلوع آفتاب"}</h4>
                   </td>
                 </tr>
               </table>
