@@ -32,9 +32,6 @@ function DisplayWeather() {
               <span className="cardtitle">
                 {data.name} , {data.sys.country}
               </span>
-              <span className="cardsubtitle">
-                {new Date().toLocaleTimeString()}
-              </span>
             </div>
           </div>
           <div className="weatherdetails">
