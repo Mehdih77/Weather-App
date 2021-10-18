@@ -1,17 +1,26 @@
+import React from "react";
 import "./ToggleBtn.css";
 
-export default function ToggleBtn() {
+const ToggleBtn = ({ toggle, checkedBox, disable }) => {
   return (
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button b2" id="button-10">
-          <input type="checkbox" class="checkbox" />
-          <div class="knobs">
+    <div className="toggle-button-cover">
+      <div className="button-cover">
+        <div className="button b2" id="button-10">
+          <input
+            disabled={disable}
+            onChange={toggle}
+            checked={checkedBox}
+            type="checkbox"
+            className="checkbox"
+          />
+          <div className="knobs">
             <span>YES</span>
           </div>
-          <div class="layer"></div>
+          <div className="layer"></div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default React.memo(ToggleBtn);
