@@ -3,7 +3,7 @@
   background-size: cover;
   padding-top: 30px;
   width: 100%;
-  min-height: 736px;
+  height: 100vh;
 }
 .weather .title {
   color: aliceblue;

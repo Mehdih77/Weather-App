@@ -36,19 +36,22 @@
 
 /* weatherdetails */
 .weatherdetails {
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
+  
 }
 .weatherdetails table {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 tr {
   display: flex;
   flex-direction: column;
+  flex: 30%;
   text-align: center;
-  margin: 0px 25px;
+  margin: 3px 25px;
 }
 td {
   padding: 2px 0;

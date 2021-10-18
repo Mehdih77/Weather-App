@@ -21,12 +21,12 @@ function Weather() {
   };
 
   return (
-    <div style={{backgroundImage:`url(${bgPoster})`}} className="weather">
+    <section style={{backgroundImage:`url(${bgPoster})`}} className="weather">
       <SearchInput />
         <div>
           <DisplayWeather />
         </div>
-    </div>
+    </section>
   );
 }
 

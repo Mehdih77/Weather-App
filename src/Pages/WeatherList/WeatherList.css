@@ -1,6 +1,7 @@
 .weather_list_page {
   background-color: #1a1a1a;
   position: relative;
+  min-height: 100vh;
 }
 .weather_list_page h3 {
   color: #fff;
@@ -8,8 +9,7 @@
   text-align: center;
   padding-top: 30px;
   text-transform: uppercase;
-  z-index: 2;
-  padding-bottom: 140px;
+  padding-bottom: 130px;
 }
 .weather_list_page_img {
   width: 250px;
@@ -18,11 +18,47 @@
   top: 100px;
   right: 20px;
 }
-/* cards wrapper */
+
+/* ------------------------------ cards wrapper ----------------------------- */
 .weather_wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
-  /* background-color: black; */
   color: #fff;
+  background-color: rgba(255, 255, 255, 0.024);
+  box-shadow: 0px 0px 4px 0px #303030;
+  margin: 15px 25px;
+  border-radius: 15px;
+}
+.weather_wrapper:last-child {
+  margin-bottom: 52px;
+}
+.weather_wrapper_time p:nth-child(1) {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  padding-top: 5px;
+}
+.weather_wrapper_time p:nth-child(2) {
+  color: rgba(255, 255, 255, 0.781);
+}
+.weather_wrapper_time p:nth-child(2) i {
+  font-size: 12px;
+  vertical-align: 1px;
+  color: rgba(255, 255, 255, 0.575);
+}
+.weather_wrapper_temp {
+  font-size: 40px;
+}
+.weather_wrapper_temp sup {
+  font-size: 10px;
+  vertical-align: 20px;
+  color: rgba(255, 255, 255, 0.575);
+}
+.weather_wrapper_temp sup span {
+  font-size: 20px;
+  vertical-align: -10px;
+}
+.weather_wrapper_img img{
+  width: 60px;
 }

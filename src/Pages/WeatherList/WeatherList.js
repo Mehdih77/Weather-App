@@ -13,7 +13,7 @@ export default function WeatherList() {
       <div className="weather_wrapper">
         <div className="weather_wrapper_time">
           <p>{item.dt_txt.split(",").join().slice(0, 10)}</p>
-          <p>{item.dt_txt.split(",").join().slice(10, 16)}</p>
+          <p><i className="far fa-clock"></i>{item.dt_txt.split(",").join().slice(10, 16)}</p>
         </div>
         <div className="weather_wrapper_temp">
           {Math.floor(item.main.temp)}
@@ -30,7 +30,7 @@ export default function WeatherList() {
 
   return <section className='weather_list_page'>
       <h3>Forecast Report</h3>
-      <img className='weather_list_page_img' src={rain} />
+      <img className='weather_list_page_img' src={rain} alt='Forecast Report' />
       {showList}
       </section>;
 }
