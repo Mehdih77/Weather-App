@@ -1,0 +1,44 @@
+.weather form {
+  display: flex;
+  justify-content: center;
+}
+.weather form label {
+  position: relative;
+  width: 80%;
+}
+.weather form label input {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(226, 226, 226);
+  color: #202020;
+}
+input:enabled {
+  font-size: 18px;
+}
+input::placeholder {
+  color: #202020;
+}
+.weather form input:focus {
+  outline: none;
+  border: none;
+}
+
+.weather-btn {
+  font-size: 22px;
+  position: absolute;
+  top: 9px;
+  right: 11px;
+  background-color: transparent;
+  z-index: 99;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.weather-btn:hover {
+  color: #6568B7;
+}
+.weather-btn:active {
+  transform: scale(0.9);
+}
