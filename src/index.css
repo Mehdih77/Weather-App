@@ -1,10 +1,18 @@
+@font-face {
+  font-family: "Vazir";
+  src: url(../src/fonts/Vazir.woff2) format("woff2"),
+    url(../src/fonts/Vazir.woff) format("woff");
+  font-style: "normal";
+  font-weight: "normal";
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  /* overflow: hidden; */
+body {
+  font-family: "Vazir", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
 }
 button {
   border: none;

@@ -5,8 +5,7 @@ import {useSettingContext} from '../../Context/SettingContext/SettingProvider';
 
 function DisplayWeather() {
   const { oneWeather: data } = useWeatherState();
-  const { englishLanguage } = useSettingContext();
-
+  const { englishLanguage,checkedTimeFormat } = useSettingContext();
 
   const iconurl =
     "http://openweathermap.org/img/w/" +
@@ -77,7 +76,7 @@ function DisplayWeather() {
                     <span>
                       {new Date(data.sys.sunset * 1000).toLocaleTimeString(
                         "en-US",
-                        { hour12: false, hour: "2-digit", minute: "2-digit" }
+                        { hour12: checkedTimeFormat, hour: "2-digit", minute: "2-digit" }
                       )}
                     </span>
                   </td>
@@ -90,7 +89,7 @@ function DisplayWeather() {
                     <span>
                       {new Date(data.sys.sunrise * 1000).toLocaleTimeString(
                         "en-US",
-                        { hour12: false, hour: "2-digit", minute: "2-digit" }
+                        { hour12: checkedTimeFormat, hour: "2-digit", minute: "2-digit" }
                       )}
                     </span>
                   </td>

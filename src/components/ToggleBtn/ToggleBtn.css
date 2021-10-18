@@ -51,3 +51,6 @@
 #button-10 .checkbox:checked + .knobs:after {
   color: #fff;
 }
+.disable {
+  background-color: rgba(83, 83, 83, 0.8);
+}

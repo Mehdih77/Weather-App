@@ -25,11 +25,13 @@ export default function SettingProvider({ children }) {
 
   const toggleTimeFormat = useCallback(() => {
     setCheckedTimeFormat(!checkedTimeFormat)
-    // localStorage.setItem("timeFormat", JSON.stringify(!checkedTimeFormat));
+    localStorage.setItem("timeFormat", JSON.stringify(!checkedTimeFormat));
   },[checkedTimeFormat]);
 
   useEffect(() => {
     const lang = localStorage.getItem("language") === "true";
+    const timeFormat = localStorage.getItem("timeFormat") === "true";
+    setCheckedTimeFormat(timeFormat);
     setEnglishLanguage(lang);
   }, []);
 
